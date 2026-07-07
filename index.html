@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>財團法人三花棉業公益教育基金會</title>
+<style>
+  :root {
+    --navy: #0e1d49;
+    --divider: #d9d4c8;
+    --text-dark: #222;
+    --text-body: #444;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+    color: var(--text-dark);
+    padding-top: 64px;
+    background: #fff;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* 上方固定列 */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .navbar a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .navbar img {
+    height: 32px;
+    width: auto;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+
+  /* 標題橫幅 */
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 8px 0 40px;
+  }
+
+  .section-title .line {
+    flex: 1;
+    max-width: 260px;
+    height: 1px;
+    background: #aacdf0;
+  }
+
+  .section-title span {
+    background: #cfe6fb;
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 10px 28px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  /* 三個活動標籤 */
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .badge-row a {
+    flex: 1 1 240px;
+    max-width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .badge-row a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  }
+
+  .badge-row img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 2px solid var(--divider);
+    max-width: 950px;
+    margin: 0 auto 40px;
+  }
+
+  /* 三個介紹卡片 */
+  .card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .card {
+    flex: 1 1 300px;
+    max-width: 340px;
+    border: 1px solid #e0ddd4;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+
+  .card-photo {
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+
+  .card-photo.logo {
+    width: 92%;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 最新消息 */
+  .news {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    padding: 24px 28px;
+    border: 1px solid #e0ddd4;
+    border-radius: 16px;
+    background: #fafaf7;
+  }
+
+  .news h2 {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    color: var(--navy);
+    text-align: center;
+  }
+
+  .news ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .news li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-body);
+  }
+
+  .news li:last-child { margin-bottom: 0; }
+
+  .news li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: var(--navy);
+    font-size: 0.75rem;
+    top: 0.35em;
+  }
+
+  .news a {
+    color: #1a5fb4;
+    text-decoration: underline;
+  }
+
+  .card h3 {
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+    color: var(--navy);
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--text-body);
+  }
+
+  @media (max-width: 600px) {
+    .navbar { padding: 0 16px; }
+    .section-title span { font-size: 1.05rem; padding: 8px 18px; }
+    .section-title .line { display: none; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="https://sunflower.org.tw/" target="_blank" rel="noopener">
+      <img src="Images/TopLogo.png" alt="三花基金會">
+    </a>
+  </header>
+
+  <main>
+
+    <div class="section-title">
+      <span class="line"></span>
+      <span>2026年校際活動</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="badge-row">
+      <a href="http://seedschool.sunflower.org.tw/" target="_blank" rel="noopener">
+        <img src="Images/Label-Seed.png" alt="115學年度 三花菁英種子學堂">
+      </a>
+      <a href="https://vc-sf-story-bbs2671yv-chad-lius-projects-d03c8b07.vercel.app/" target="_blank" rel="noopener">
+        <img src="Images/Label-SayStory.png" alt="2026年 小學生為愛說故事比賽">
+      </a>
+      <a href="#">
+        <img src="Images/Label-Culture.png" alt="2026年 三花文化館杯導覽比賽">
+      </a>
+    </div>
+
+    <hr class="divider">
+
+    <div class="news">
+      <h2>最新消息</h2>
+      <ul>
+        <li>115 學年度「三花菁英種子學堂」於115/7/20 ~ 115/7/31 申請。<a href="https://docs.google.com/document/d/14A-hwWD2X5_7U9M-lCqn-Im0qvBjkcm2/edit?usp=sharing&ouid=104160286456372503282&rtpof=true&sd=true" target="_blank" rel="noopener">詳細計畫連結</a></li>
+        <li>「小學生為愛說故事」於 115年 11月舉辦。</li>
+        <li>「三花文化館杯導覽比賽」於 115年 11月舉辦。</li>
+        <li>活動聯絡人：劉老師  wentzu@lhes.tp.edu.tw。</li>
+      </ul>
+    </div>
+
+    <hr class="divider">
+
+    <div class="card-row">
+      <a class="card" href="https://sunflower.org.tw/" target="_blank" rel="noopener">
+        <img class="card-photo" src="Images/SunFlower.png" alt="三花棉業公益教育基金會">
+        <h3>三花棉業公益教育基金會</h3>
+        <p>長期投入教育、體育、文化及公益慈善領域，透過多元計畫培育人才、關懷弱勢，促進社會永續發展。</p>
+      </a>
+
+      <a class="card" href="https://sunflower.org.tw/seedschool_intro.php" target="_blank" rel="noopener">
+        <img class="card-photo logo" src="Images/SF_logo.png" alt="種子學堂">
+        <h3>種子學堂</h3>
+        <p>協助學校辦理才藝社團，培養學生自主學習能力、品格素養與未來競爭力，協助孩子發掘潛能、勇敢追夢。</p>
+      </a>
+
+      <a class="card" href="https://sunflower.org.tw/news_list.php" target="_blank" rel="noopener">
+        <img class="card-photo" src="Images/CultureRoon.jpg" alt="三花文化館">
+        <h3>三花文化館</h3>
+        <p>三花棉業文化館已於2023年正式開放，創辦人將50多年的品牌創業心法，希望能將創業精神傳承給下一代年輕人。</p>
+      </a>
+    </div>
+
+  </main>
+
+</body>
+</html>
