@@ -30,11 +30,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 64px;
     background: var(--navy);
     display: flex;
     align-items: center;
-    padding: 0 21px;
+    padding: 0 24px;
     z-index: 100;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   }
@@ -46,48 +46,41 @@
   }
 
   .navbar img {
-    height: 27px;
+    height: 32px;
     width: auto;
-    transform: translateY(-2px); 
   }
 
   main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 24px 64px;
+    padding: 32px 24px 64px;
   }
 
-/* 標題橫幅 */
-.section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin: 8px 0 40px;
-}
+  /* 標題橫幅 */
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 8px 0 40px;
+  }
 
-.section-title .line {
-  flex: 1;
-  max-width: 600px;
-  height: 1px;
-  background: #abe1ff;
-  
-  /* 關鍵新增：手動將兩邊細線的實際位置下移 4px，對齊藍色方塊中心 */
-  transform: translateY(10px); 
-}
+  .section-title .line {
+    flex: 1;
+    max-width: 260px;
+    height: 1px;
+    background: #aacdf0;
+  }
 
-.section-title span {
-  /* 保持原本您設定好的粗方塊與行高 */
-  background: linear-gradient(to bottom, transparent 50%, #abe1ff 50%);
-  color: var(--navy);
-  font-weight: bold;
-  -webkit-text-stroke: 0.3px var(--navy);
-  font-size: 1.4rem;
-  padding: 0px 20px; 
-  line-height: 2.1; 
-  border-radius: 0px;
-  white-space: nowrap;
-}
+  .section-title span {
+    background: #cfe6fb;
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 10px 28px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
 
   /* 三個活動標籤 */
   .badge-row {
@@ -120,8 +113,8 @@
 
   hr.divider {
     border: none;
-    border-top: 1px solid var(--divider);
-    max-width: 1200px;
+    border-top: 2px solid var(--divider);
+    max-width: 950px;
     margin: 0 auto 40px;
   }
 
@@ -178,8 +171,7 @@
 
   .news h2 {
     margin: 0 0 14px;
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--navy);
     text-align: center;
   }
@@ -269,8 +261,11 @@
     <div class="news">
       <h2>公告</h2>
       <ul>
-        <li>「115 學年度三花菁英種子學堂」續辦學校申請，<a href="https://vc-sf-admin.vercel.app/report/sf-apply-115" target="_blank" rel="noopener">審核通過名單公告</a>。</li>
-        <li>「115 學年度三花菁英種子學堂」新辦學校申請，請於115年8月15日前點選上方【115學年度三花菁英種子學堂】，<a href="https://drive.google.com/file/d/1Nk5NGC2V8-JLrG2AUBKa5jBNwjXmsXFq/view?usp=sharing" target="_blank" rel="noopener">詳細計畫連結</a>。</li>
+          <li>「115 學年度三花菁英種子學堂」續辦學校申請，
+          <a href="https://vc-sf-admin.vercel.app/report/sf-apply-115" target="_blank" rel="noopener">審核通過名單公告</a>。</li>      
+        <li>「115 學年度三花菁英種子學堂」新辦學校申請，請於115年8月15日前至左上方【115學年度三花菁英種子學堂】。
+
+          <a href="https://drive.google.com/file/d/1dZ7_3f_vTtH68jpEcrVXEG_1FZTZpVuE/view?usp=drive_link" target="_blank" rel="noopener">詳細計畫連結</a></li>
         <li>「小學生為愛說故事」於 115年 10月舉辦。</li>
         <li>高中職「三花文化館盃導覽比賽」於 115年 10月舉辦。</li>
         <li>活動聯絡人：劉老師  wentzu@lhes.tp.edu.tw。</li>
